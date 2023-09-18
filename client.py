@@ -1,16 +1,15 @@
 from settings import *
-import socket            
- 
+import socket
 
-s = socket.socket()        
- 
+s = socket.socket()
 
 port = default_port
- 
 
-s.connect(('127.0.0.1', port))
- 
+s.connect((server_ip, port))
 
-print (s.recv(1024).decode())
-
-s.close()    
+while True:
+    data = s.recv(1024).decode()
+    if data:
+        print(data)
+    
+s.close()
