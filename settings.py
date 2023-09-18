@@ -1,2 +1,2 @@
 server_ip = "localhost"
-default_server_port = 9898
+default_port = 9898
